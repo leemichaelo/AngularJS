@@ -79,7 +79,7 @@ a {
         padding: 25px 0 27px 25px;
     }
 
-input[type="checkbox"] {
+/*input[type="checkbox"] {
     display: none;
 }
 
@@ -95,4 +95,4 @@ input[type="checkbox"] {
 
     input[type="checkbox"]:checked + span {
         background: url(checkbox-filled.svg) left top no-repeat;
-    }
+    }*/
