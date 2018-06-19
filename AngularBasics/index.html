@@ -9,6 +9,9 @@
 
     <h1>My TODOs</h1>
     <div ng-controller="mainCtrl" class="list">
+        <div class="add">
+            <a href="" ng-click="addTodo()">+ Add a New Task</a>
+        </div>
         <div class="item" ng-class="{'editing-item': editing, 'edited': todo.edited}" ng-repeat="todo in todos">
             <input ng-model="todo.completed" type="checkbox" />
             <label ng-hide="editing">{{todo.name}}</label>
@@ -16,13 +19,15 @@
 
             <div class="actions">
                 <a href="" ng-click="editing = !editing">Edit</a>
-                <a href="" ng-click="helloConsole()">Save</a>
-                <a href="" class="delete">Delete</a>
+                <a href="" ng-click="saveTodo(todo)">Save</a>
+                <a href="" ng-click="deleteTodo(todo, $index)" class="delete">Delete</a>
             </div>
         </div>
     </div>
 
     <script src="/Scripts/angular.js" type="text/javascript"></script>
     <script src="/Scripts/Custom/app.js" type="text/javascript"></script>
+    <script src="/Scripts/Controllers/main.js" type="text/javascript"></script>
+    <script src="/Scripts/Services/data.js" type="text/javascript"></script>
 </body>
 </html>
